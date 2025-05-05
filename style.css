@@ -1,20 +1,17 @@
-/* Общие стили */
+/* Հիմնական ոճեր */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Noto Sans Armenian', 'Arial', sans-serif; /* Հայատառ տառատեսակ */
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Светло-серый фон */
-    color: #333; /* Темно-серый текст */
-    line-height: 1.6;
+    background-color: #ffffff; /* Սպիտակ ֆոն */
+    color: #2d2d2d; /* Մուգ մոխրագույն տեքստ */
+    line-height: 1.5;
+    font-size: 16px;
 }
 
-.container {
-    max-width: 1100px; /* Шире контейнер для магазина */
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff; /* Белый фон для контента */
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+a {
+    text-decoration: none;
+    color: inherit; /* Հղումները ժառանգում են ծնողի գույնը */
 }
 
 img {
@@ -23,163 +20,197 @@ img {
     display: block;
 }
 
-/* Стили для страницы входа */
-.entry-page {
-    text-align: center;
-    margin-top: 80px; /* Больше отступ сверху */
-}
-
-.logo {
-    max-width: 150px; /* Размер логотипа */
-    margin-bottom: 20px;
-}
-
-.entry-page h1 {
-    color: #0056b3; /* Синий цвет заголовка */
-    margin-bottom: 10px;
-}
-
-.entry-page p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 30px;
-}
-
 .button {
     display: inline-block;
-    padding: 12px 25px;
-    background-color: #28a745; /* Зеленая кнопка */
-    color: white;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 12px 30px;
+    background-color: #2d2d2d; /* Սև կոճակ */
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 700; /* Bold */
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase; /* Մեծատառ */
     border: none;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .button:hover {
-    background-color: #218838; /* Темнее при наведении */
-    transform: translateY(-2px); /* Легкий подъем */
+    background-color: #555; /* Մոխրագույն՝ հովերի ժամանակ */
+    transform: translateY(-1px);
 }
 
-/* Стили для шапки (header) на странице магазина */
-header {
-    background-color: #343a40; /* Темная шапка */
-    color: white;
-    padding: 10px 0;
-    border-bottom: 3px solid #007bff; /* Синяя полоса внизу шапки */
+/* Մուտքի էջի ոճեր */
+.entry-container {
+    max-width: 600px;
+    margin: 100px auto 50px; /* Կենտրոնացում և օդ */
+    padding: 40px;
+    text-align: center;
+    background-color: #f9f9f9; /* Շատ բաց մոխրագույն */
+    border-radius: 8px;
 }
 
-.header-content {
-    max-width: 1100px;
+.entry-container h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.entry-container p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Header (Խանութի էջ) */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5; /* Նուրբ ստորին գիծ */
+    padding: 15px 0;
+    position: sticky; /* Կպչուն header */
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1280px; /* Ավելի լայն կոնտեյներ */
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between; /* Элементы по краям */
+    justify-content: space-between;
     align-items: center;
 }
 
-.header-content h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
-
-.logo-small {
-    max-height: 40px; /* Маленький логотип в шапке */
-}
-
-.nav-link {
-    color: #fff;
+.logo-link {
     text-decoration: none;
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+
+.main-nav a {
+    margin-left: 25px;
     font-size: 1em;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    font-weight: 500;
+    color: #2d2d2d;
+    transition: color 0.2s ease;
 }
 
-.nav-link:hover {
-    background-color: #495057; /* Фон при наведении */
+.main-nav a:hover {
+    color: #007bff; /* Կապույտ՝ հովերի ժամանակ */
 }
 
+/* Խանութի հիմնական մաս */
+.store-container {
+    max-width: 1280px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
 
-/* Стили для страницы магазина */
-.store-page h2 {
+.store-container h2 {
     text-align: center;
-    margin-bottom: 30px;
-    color: #0056b3;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
+/* Ապրանքների ցանց */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
-    gap: 25px; /* Отступы между товарами */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ադապտիվ սյուներ */
+    gap: 30px; /* Ավելի մեծ տարածություն */
 }
 
-.product {
-    border: 1px solid #e1e4e8; /* Светлая рамка */
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #fdfdfd; /* Чуть светлее основного фона */
-    text-align: center;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    display: flex; /* Используем flexbox для выравнивания */
-    flex-direction: column; /* Элементы в колонку */
-    justify-content: space-between; /* Распределяем пространство */
+.product-card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    overflow: hidden; /* Կլորացված անկյունները նկարի համար */
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.product:hover {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12); /* Тень при наведении */
-    transform: translateY(-5px); /* Легкий подъем карточки */
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ավելի ընդգծված ստվեր */
 }
 
-.product img {
-    margin-bottom: 15px;
-    border-radius: 5px;
-    aspect-ratio: 1 / 1; /* Делаем картинку квадратной */
-    object-fit: cover; /* Масштабируем картинку, сохраняя пропорции и обрезая лишнее */
+.product-link {
+    display: block; /* Հղումը զբաղեցնում է տարածք */
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1; /* Թույլ է տալիս քարտին զբաղեցնել ամբողջ բարձրությունը */
 }
 
-.product h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
-    min-height: 40px; /* Чтобы заголовки занимали примерно одинаковую высоту */
+.product-image-container {
+    background-color: #f1f1f1; /* Ֆոն նկարի տակ */
+    aspect-ratio: 3 / 4; /* Նկարի չափերի հարաբերակցություն (ինչպես հագուստի մոդելները) */
+    overflow: hidden;
 }
 
-.product p {
-    font-size: 0.95em;
-    color: #555;
-    margin-bottom: 8px;
-    flex-grow: 1; /* Описание занимает доступное пространство */
+.product-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Նկարը լցնում է կոնտեյները՝ պահպանելով համամասնությունը */
+    transition: transform 0.3s ease;
 }
 
-.product .price {
-    font-weight: bold;
-    color: #007bff; /* Синий цвет цены */
+.product-card:hover .product-image-container img {
+    transform: scale(1.05); /* Թեթև մեծացում նկարի վրա */
+}
+
+.product-info {
+    padding: 15px;
+    text-align: left; /* Ձախից հավասարեցում */
+}
+
+.product-info h3 {
+    font-size: 1em; /* Մի փոքր փոքրացնենք անվանումը */
+    font-weight: 500; /* Normal քաշ */
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+    min-height: 40px; /* Որպեսզի անվանումները մոտավորապես նույն տեղն զբաղեցնեն */
+}
+
+.product-info .price {
     font-size: 1.1em;
-    margin-top: 10px; /* Отступ сверху для цены */
-    margin-bottom: 5px;
+    font-weight: 700; /* Bold գին */
+    color: #2d2d2d;
+    margin: 0;
 }
 
-.product .contact {
+.product-actions {
+    padding: 0 15px 15px; /* Ներքևի մասի padding */
+    margin-top: auto; /* Կոնտակտները մղում է ներքև */
+    text-align: left;
+}
+
+.product-actions .contact-info {
     font-size: 0.9em;
-    color: #6c757d; /* Серый цвет для контактов */
-    margin-top: auto; /* Прижимает контакты к низу карточки */
+    color: #666;
+    margin: 10px 0 0 0;
 }
 
-/* Стили для подвала (footer) */
-footer {
+/* Ստորագիր (Footer) */
+.main-footer {
+    background-color: #f9f9f9; /* Բաց մոխրագույն ֆոն */
+    color: #666;
+    padding: 30px 0;
+    margin-top: 60px;
     text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #e9ecef; /* Светлый фон подвала */
-    color: #6c757d; /* Серый текст */
     font-size: 0.9em;
-    border-top: 1px solid #dee2e6; /* Тонкая линия сверху */
+    border-top: 1px solid #e5e5e5; /* Նուրբ վերին գիծ */
 }
 
-footer p {
+.footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container p {
     margin: 5px 0;
 }
